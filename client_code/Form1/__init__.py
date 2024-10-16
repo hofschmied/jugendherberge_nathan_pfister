@@ -19,4 +19,7 @@ class Form1(Form1Template):
 
     self.drop_down_1.items = anvil.server.call('get_jugendherbergen', "name, JID")
 
+def drop_down_1_change(self, **event_args):
+  self.drop_down_1.items[self.drop_down_1.selected_value -1][1]
+
     
