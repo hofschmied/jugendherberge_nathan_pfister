@@ -1,6 +1,6 @@
 components:
 - components:
-  - layout_properties: {grid_position: 'VALKRA,VVXPZW'}
+  - layout_properties: {grid_position: 'TNZCMT,QHYURS'}
     name: drop_down_2
     properties: {}
     type: DropDown
@@ -12,9 +12,9 @@ components:
     name: data_grid_1
     properties:
       columns:
-      - {data_key: column_1, id: JKSDUP, title: Feldkirch}
-      - {data_key: column_2, id: VJQQOR, title: Mordor}
-      - {data_key: column_3, id: OJLQEN, title: Auenland}
+      - {data_key: column_1, id: JKSDUP, title: Zimmer}
+      - {data_key: column_2, id: VJQQOR, title: Preisklasse}
+      - {data_key: column_3, id: OJLQEN, title: Poolbesuch}
     type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
@@ -26,8 +26,12 @@ components:
   type: FlowPanel
 - layout_properties: {slot: title}
   name: label_2
-  properties: {text: Startseite Jugendherberge}
+  properties: {text: Trau dich in die warme Herberge!}
   type: Label
+- layout_properties: {slot: left-nav}
+  name: drop_down_1
+  properties: {}
+  type: DropDown
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
