@@ -1,32 +1,87 @@
 components:
 - components:
-  - layout_properties: {grid_position: 'QBNYTN,DZONJB'}
+  - layout_properties: {grid_position: 'SAXIOU,NYPMLP'}
+    name: label_4
+    properties: {text: 'Buchungs Ausgabe:'}
+    type: Label
+  - event_bindings: {change: drop_down_3_change}
+    layout_properties: {grid_position: 'IDZOBP,SYQAJM'}
+    name: drop_down_3
+    properties: {}
+    type: DropDown
+  - layout_properties: {grid_position: 'UZNEJC,DXQUXX'}
+    name: label_5
+    properties: {text: verfügbare Jugendherbergen}
+    type: Label
+  - event_bindings: {change: drop_down_1_change}
+    layout_properties: {grid_position: 'QBNYTN,DZONJB'}
     name: drop_down_1
     properties: {}
     type: DropDown
-  - components:
-    - name: repeating_panel_1
-      properties: {item_template: Form2.RowTemplate1}
-      type: RepeatingPanel
-    layout_properties: {grid_position: 'QMWGDM,WBTPGZ'}
-    name: data_grid_1
-    properties:
-      columns:
-      - {data_key: zimmernummer, id: JKSDUP, title: Zimmernummer}
-      - {data_key: bettenanzahl, id: VJQQOR, title: Bettenanzahl}
-      - {data_key: preis_pro_nacht, id: OJLQEN, title: Preis pro Nacht}
-      - {data_key: status, id: RLTJXE, title: Status}
-      - {data_key: von, id: XJRCPO, title: Von}
-      - {data_key: bis, id: QRIMQA, title: Bis}
-    type: DataGrid
+  - layout_properties: {grid_position: 'PGIORS,RSKURI'}
+    name: label_3
+    properties: {text: 'verfügbare Zimmer:'}
+    type: Label
+  - layout_properties: {grid_position: 'GBGIIX,GYSNSZ'}
+    name: drop_down_2
+    properties: {}
+    type: DropDown
+  - layout_properties: {grid_position: 'QHOPVL,GZVYMY'}
+    name: label_6
+    properties: {text: Zusätzliche Gäste}
+    type: Label
+  - layout_properties: {grid_position: 'YFFMXY,XNGEGN'}
+    name: check_box_1
+    properties: {text: Rudi Rüffel}
+    type: CheckBox
+  - layout_properties: {grid_position: 'IHHLPR,WMGJSZ'}
+    name: check_box_2
+    properties: {text: Fidibus Erdkern}
+    type: CheckBox
+  - layout_properties: {grid_position: 'UQTRNX,RLMIAA'}
+    name: check_box_3
+    properties: {text: Tinnitus Förstl}
+    type: CheckBox
+  - layout_properties: {grid_position: 'GPRSKZ,RLZCGL'}
+    name: label_7
+    properties: {text: Startdatum}
+    type: Label
+  - event_bindings: {change: date_picker_1_change}
+    layout_properties: {grid_position: 'VJESIH,WUHCKU'}
+    name: date_picker_1
+    properties: {}
+    type: DatePicker
+  - layout_properties: {grid_position: 'YXQDPP,ASVKXJ'}
+    name: label_8
+    properties: {text: Enddatum}
+    type: Label
+  - event_bindings: {change: date_picker_2_change}
+    layout_properties: {grid_position: 'NCSIWY,LFFXAC'}
+    name: date_picker_2
+    properties: {}
+    type: DatePicker
+  - event_bindings: {click: button_1_click}
+    layout_properties: {grid_position: 'BXFECQ,VVKPUO'}
+    name: button_1
+    properties: {text: buchen}
+    type: Button
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - layout_properties: {}
+    name: label_2
+    properties: {text: Spaßige Nächte}
+    type: Label
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: Warme Jugendherbergen}
+  type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
