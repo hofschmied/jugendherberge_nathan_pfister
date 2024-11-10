@@ -19,7 +19,6 @@ class Form2(Form2Template):
   
     jid_to_name = {jid: name for name, jid in jugendherbergen}
 
-    print(anvil.server.call("get_zimmer_for_jugendherbergen"))
     self.listezimmer = [(zimmernummer, bettenanzahl, preis_pro_nacht, gebucht, JID, ZID) for zimmernummer, bettenanzahl, preis_pro_nacht, gebucht, JID, ZID in anvil.server.call('get_zimmer_for_jugendherbergen')]
 
     liste = []
