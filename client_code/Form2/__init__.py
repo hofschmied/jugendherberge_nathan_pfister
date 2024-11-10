@@ -47,3 +47,10 @@ class Form2(Form2Template):
   def button_1_click(self, **event_args):
     """Dieser Code wird ausgeführt, wenn der Button geklickt wird."""
     pass
+
+  def drop_down_1_change(self, **event_args):
+    """This method is called when an item is selected"""
+    ausgewaehlter_index = self.drop_down_1.selected_value
+
+    
+    
