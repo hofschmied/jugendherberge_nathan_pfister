@@ -18,7 +18,6 @@ class Form2(Form2Template):
 
   
     jid_to_name = {jid: name for name, jid in jugendherbergen}
-
     self.listezimmer = [(zimmernummer, bettenanzahl, preis_pro_nacht, gebucht, JID, ZID) for zimmernummer, bettenanzahl, preis_pro_nacht, gebucht, JID, ZID in anvil.server.call('get_zimmer_for_jugendherbergen')]
 
     liste = []
@@ -30,7 +29,7 @@ class Form2(Form2Template):
       
     
     self.drop_down_3.items = liste
-
+                
   def drop_down_3_change(self, **event_args):
     """This method is called when an item is selected"""
     pass
@@ -42,3 +41,7 @@ class Form2(Form2Template):
   def date_picker_2_change(self, **event_args):
     """This method is called when the selected date changes"""
     pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+  
