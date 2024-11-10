@@ -4,10 +4,8 @@ import anvil.server
 
 class Form2(Form2Template):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
     
     print(anvil.server.call("get_jugendherbergen"))
     jugendherbergen = anvil.server.call('get_jugendherbergen', "name, JID")
@@ -29,19 +27,23 @@ class Form2(Form2Template):
       
     
     self.drop_down_3.items = liste
-                
+
   def drop_down_3_change(self, **event_args):
     """This method is called when an item is selected"""
     pass
 
   def date_picker_1_change(self, **event_args):
-    """This method is called when the selected date changes"""
-    pass
+    """Diese Methode wird aufgerufen, wenn das Datum im ersten DatePicker geändert wird"""
+    selected_date_1 = self.date_picker_1.date
+
+    if selected_date_1 is not None:
+        self.date_picker_2.min_date = selected_date_1
+        self.date_picker_2.selected_date = None
 
   def date_picker_2_change(self, **event_args):
-    """This method is called when the selected date changes"""
+    """Diese Methode wird aufgerufen, wenn das Datum im zweiten DatePicker geändert wird"""
     pass
 
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-  
+    """Dieser Code wird ausgeführt, wenn der Button geklickt wird."""
+    pass
