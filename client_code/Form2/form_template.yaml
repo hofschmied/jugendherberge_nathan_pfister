@@ -22,7 +22,8 @@ components:
     name: label_9
     properties: {text: 'Preiskategorie:'}
     type: Label
-  - layout_properties: {grid_position: 'BJFMIJ,EKAYIQ'}
+  - event_bindings: {change: drop_down_2_change}
+    layout_properties: {grid_position: 'BJFMIJ,EKAYIQ'}
     name: drop_down_2
     properties: {}
     type: DropDown
