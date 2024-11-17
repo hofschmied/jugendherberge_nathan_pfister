@@ -13,8 +13,6 @@ import sqlite3
 # them with @anvil.server.callable.
 # Here is an example - you can replace it with your own:
 #
-
-
 @anvil.server.callable
 def get_jugendherbergen(rows="*"):
   conn = sqlite3.connect(data_files['jugendherbergen_verwaltung.db'])
@@ -66,7 +64,6 @@ def add_buchung(jugendherberge, preiskategorie, zimmer, start_datum, end_datum, 
         VALUES (?, ?)
     ''', (neue_buchung_id, user,))
       
-    # Update room status to booked
     cursor.execute("UPDATE zimmer SET gebucht = 1 WHERE zimmernummer = ?", (zimmer,))
     
     conn.commit()

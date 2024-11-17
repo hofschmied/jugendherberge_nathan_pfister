@@ -25,10 +25,9 @@ class Form2(Form2Template):
       self.drop_down_4.items = anvil.server.call("get_buchungen")
   
     def update_dropdown(self):
-      ausgewaehlte_jid = self.drop_down_1.selected_value  # Hole die ausgewählte JID
+      ausgewaehlte_jid = self.drop_down_1.selected_value
   
       if ausgewaehlte_jid:
-          # Filtere die Zimmer basierend auf der JID
           gefilterte_zimmer = [
               z for z in self.zimmer_liste if z[4] == ausgewaehlte_jid
           ]
